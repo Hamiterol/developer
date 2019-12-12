@@ -1,0 +1,31 @@
+ public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+
+        }
+        Random rdn = new Random();
+        private void btntahminet_Click(object sender, EventArgs e)
+        {
+            tahmin_et();
+        }
+        public void tahmin_et()
+        {
+            int sayi = rdn.Next(0, 5);
+            int say = Convert.ToInt32(textBox1.Text);
+            if (sayi==say)
+            {
+                MessageBox.Show("Terikler Bildiniz");
+            }
+            else
+            {
+                MessageBox.Show("Yanlış Bildin"+"  "+"Doğru Sayı:"+sayi);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+    }
